@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 200px;
+    border: 1px solid greenyellow;
+    margin: 20px;
+    padding: 10px;
+}
+.image{
+    height: 200px;
+    width:200px;
+    object-fit: contain;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
