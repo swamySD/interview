@@ -10,8 +10,7 @@ const SingleProduct = () => {
      .then(res=>setProduct(res)
      )
     },[id])
-    console.log(id)
-    console.log(product)
+  
 
   return (
     <>

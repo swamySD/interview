@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import classes from './Home.module.css'
 import Otp from '../Otp.js/Otp'
+import MultiSearch from '../MultiSearch/MultiSearch'
 const Home = () => {
     const [products,setProducts]=useState(null)
 
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <>
+    <MultiSearch/>
     <Otp/>
     <div className={classes.container}>
         {products?.map((item,i)=>{
