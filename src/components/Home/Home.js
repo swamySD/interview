@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import classes from './Home.module.css'
 import Otp from '../Otp.js/Otp'
 import MultiSearch from '../MultiSearch/MultiSearch'
+import FileExplorer from '../FileExplorer/FileExplorer'
 const Home = () => {
     const [products,setProducts]=useState(null)
 
@@ -17,6 +18,8 @@ const Home = () => {
 
   return (
     <>
+
+    <FileExplorer/>
     <MultiSearch/>
     <Otp/>
     <div className={classes.container}>

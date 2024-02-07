@@ -1,0 +1,10 @@
+.folder{
+cursor: pointer;
+}
+
+.file{
+    display: flex;
+    flex-direction: column;
+cursor: pointer;
+
+}
