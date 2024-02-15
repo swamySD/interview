@@ -4,6 +4,7 @@ import classes from './Home.module.css'
 import Otp from '../Otp.js/Otp'
 import MultiSearch from '../MultiSearch/MultiSearch'
 import FileExplorer from '../FileExplorer/FileExplorer'
+import Checkout from '../Checkout/Checkout'
 const Home = () => {
     const [products,setProducts]=useState(null)
 
@@ -14,7 +15,7 @@ const Home = () => {
      )
     },[])
 
-    console.log(products)
+    
 
   return (
     <>
@@ -22,6 +23,7 @@ const Home = () => {
     <FileExplorer/>
     <MultiSearch/>
     <Otp/>
+    <Checkout/>
     <div className={classes.container}>
         {products?.map((item,i)=>{
             return(
