@@ -5,6 +5,7 @@ import Otp from '../Otp.js/Otp'
 import MultiSearch from '../MultiSearch/MultiSearch'
 import FileExplorer from '../FileExplorer/FileExplorer'
 import Checkout from '../Checkout/Checkout'
+import Loader from './Loader'
 const Home = () => {
     const [products,setProducts]=useState(null)
 
@@ -25,6 +26,7 @@ const Home = () => {
     <Otp/>
     <Checkout/>
     <div className={classes.container}>
+        {!products&&<div className={classes.loadercontainer}> <Loader/></div>}
         {products?.map((item,i)=>{
             return(
                 <div className={classes.product} key={item.id}> 

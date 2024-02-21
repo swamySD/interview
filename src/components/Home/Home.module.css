@@ -5,6 +5,13 @@
     height: 100%;
     width: 100%;
 }
+.loadercontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .product{
     display: flex;
     flex-direction: column;
