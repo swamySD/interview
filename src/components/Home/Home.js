@@ -8,6 +8,7 @@ import Checkout from '../Checkout/Checkout'
 import Loader from './Loader'
 import FormWithoutYup from '../FormWithoutYup/FormWithoutYup'
 import Coursel from '../coursel/coursel'
+import Main from '../Coursels/Main'
 const Home = () => {
     const [products,setProducts]=useState(null)
 
@@ -28,6 +29,7 @@ const Home = () => {
     <Otp/>
     <Checkout/>
     <FormWithoutYup/>
+    <Main/>
     <Coursel/>
     <div className={classes.container}>
         {!products&&<div className={classes.loadercontainer}> <Loader/></div>}

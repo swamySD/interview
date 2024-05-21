@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import classes from './coursel.module.css'
 const data=[
     "https://www.thefactsite.com/wp-content/uploads/2010/09/random-animal-facts.jpg",
@@ -10,18 +10,19 @@ const data=[
 
 const Coursel = () => {
     const [slide,setSlide]=useState(0)
-
-
     const prevHandler=()=>{
-        setSlide(!slide ? data.length-1:slide-1)
+      setSlide(!slide ? data.length-1:slide-1)
     }
-
-
-
-    const nexthandler=()=>{
+  const nexthandler=()=>{
         setSlide((slide+1) % data.length)
     }
-  return (
+   useEffect(()=>{
+      const timer=  setTimeout(()=>{
+        nexthandler()
+        },2000)
+        return ()=> clearTimeout(timer)
+    },[slide])
+return (
     <div style={{marginTop:'30px',marginBottom:'30px',border:'1px solid lightgreen',display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
         <button onClick={prevHandler}  style={{width:'140px',height:'30px',marginRight:'30px'}}>Previous</button>
         {data.map((url,index)=>(<img key ={index} src={url} alt="" className={`${slide === index ? classes.active: classes.disbled}`} style={{ width:'400px',height:'400px',objectFit:'cover'}}/>))}
